@@ -2,9 +2,7 @@
 Decentralised Truth Oracle on Tezos
 
 ### Fake News
-
-    Wikipedia defines "Fake news" as false or misleading information presented as news.
-    Fake news often has the aim of damaging the reputation of a person or entity or making money through advertising revenue. Fake news includes satirical articles misinterpreted as genuine, and articles that employ sensationalist or clickbait headlines that are not supported in the text. With the advent of social media, the prevalence of fake news has increased, especially the Facebook News Feed, and Twitter and this misinformation is gradually seeping into the mainstream media. Several factors have been implicated in the spread of fake news, such as political polarization, post-truth politics, motivated reasoning, confirmation bias, and social media algorithms.
+Wikipedia defines "Fake news" as false or misleading information presented as news.Fake news often has the aim of damaging the reputation of a person or entity or making money through advertising revenue. Fake news includes satirical articles misinterpreted as genuine, and articles that employ sensationalist or clickbait headlines that are not supported in the text. With the advent of social media, the prevalence of fake news has increased, especially the Facebook News Feed, and Twitter and this misinformation is gradually seeping into the mainstream media. Several factors have been implicated in the spread of fake news, such as political polarization, post-truth politics, motivated reasoning, confirmation bias, and social media algorithms.
     It has been a trend recently with the increase in Fake News during election times and thereby creating the increased polarisation of masses and civil unrest. Hence Fake News is disturbing the democratic process in Liberal democracies.
 
 ### Fact Checkers:
