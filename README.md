@@ -33,5 +33,5 @@ T-ORA currently is integrated to pull the tweets from Twitter for any specified 
 
 #### Smart Contract:
 
-T-Ora <a href = https://smartpy.io/explorer.html?address=KT1QWTGWQhfq1tp8Z5ojvS5EkVWL86uopGQ7> KT1QWTGWQhfq1tp8Z5ojvS5EkVWL86uopGQ7 </a>
+T-Ora <a href = 'https://smartpy.io/explorer.html?address=KT1QWTGWQhfq1tp8Z5ojvS5EkVWL86uopGQ7'> KT1QWTGWQhfq1tp8Z5ojvS5EkVWL86uopGQ7 </a>
     
