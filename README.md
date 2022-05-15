@@ -77,10 +77,12 @@ T-ORA currently is integrated with Twitter API to pull the tweets for any specif
 2. Posting the results back to the post as comments
 
 
-  
+### Demo site
+
+<a href='https://tora-livid.vercel.app/'>TORA</a>
   
 
 #### Smart Contract:
 
-T-Ora <a href = 'https://smartpy.io/explorer.html?address=KT1QWTGWQhfq1tp8Z5ojvS5EkVWL86uopGQ7'> KT1QWTGWQhfq1tp8Z5ojvS5EkVWL86uopGQ7 </a>
+T-Ora <a href = 'https://smartpy.io/explorer.html?address=KT1EvyfVE1bLztZ6vigLHwjmZrNDr52vsNcq'> KT1EvyfVE1bLztZ6vigLHwjmZrNDr52vsNcq</a>
     
