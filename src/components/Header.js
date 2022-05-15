@@ -190,7 +190,7 @@ export default function Header({ links = [] }) {
 		  </Box>
         </HStack>
         <Text fontSize="3xl" colorScheme="Orange" fontWeight="bold">
-          P-Oracle
+          T-ORA
         </Text>
         <Flex alignItems={'center'}>
           <IconButton

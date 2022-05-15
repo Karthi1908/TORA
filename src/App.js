@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, useParams  } from 'react-router-dom';
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react';
 import Header from './components/Header';
+import Reporter from './components/Reporter';
 import Predict from './components/Predict';
 import './App.css';
 import Home from './components/Home';
@@ -30,7 +31,7 @@ function App() {
       //   console.log(key);
       //   console.log(storage.predictTokenDetails.get(key));
       // }
-      for (let pred =1; pred < counter; pred++  ) {
+      for (let pred =2; pred < counter; pred++  ) {
 	  	 await predictions.get(pred).then(value => { predList.push({ id: pred, value }) });
 		 
       
@@ -59,8 +60,10 @@ function App() {
             >
               <BrowserRouter>
                 <Header />
+				<Reporter />
+				
 				<Routes>
-                <Route exact path="/"  element = {<Home />} />  
+                <Route exact path="/"  element = {<Home />} /> 
 				
 				
                 <Route

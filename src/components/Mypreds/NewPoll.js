@@ -41,12 +41,14 @@ export default function AddNewPoll() {
     // by default, only the Tweet ID and text fields are returned
     const params = {
         'query': 'from:BBCBreaking',
-        'tweet.fields': 'author_id',
-		 'max_results': '10'
+        'max_results': '10'
     }
 
     const res = await needle('get', endpointUrl, params, {
+		mode: 'no-cors',
+        
         headers: {
+			
 			"User-Agent": "v2RecentSearchJS",
             "authorization": `Bearer AAAAAAAAAAAAAAAAAAAAAB5FRAEAAAAAWAGGw86azAmXCI67ZS3mYAwWBWQ%3DR4MDWRt4l6d5MLtrQ3Gai04U3qVItjbDOc0qdZ7zpNZ73ExSTJ`
         }
