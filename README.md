@@ -18,10 +18,20 @@ Wikipedia defines "Fake news" as false or misleading information presented as ne
 
 T-ORA currently is integrated to pull the tweets from Twitter for any specified user id.
     1. Based on the given input, the script pulls the tweets from Twitter
+    
+    
     2. Pulled tweets are then uploaded automatically to the Oracle smart contract via In Memory signer.
+    
+    
     3. Once uploaded the checker start verifying the posts and vote whether it is Fact or Fake
+    
+    
     4. The Checker needs to post a stake amount in Tez before the verifying process.
+    
+    
     5. After the verification process, the stake of the checker who votes incorrectly will be slashed by 20%
+    
+    
     6. The voters who voted correctly will be rewarded from the slashed stake.
     
 ### Salient feature:
