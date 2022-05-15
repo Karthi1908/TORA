@@ -115,7 +115,7 @@ export default function Reporter() {
 			  
 			  <Box display="flex" flexDirection="row" flexWrap="wrap" margin="5px" maxWidth="125px" minWidth="125px">
 			
-				<Text color={colors.text}>100 </Text>
+				<Text color={colors.text}>{reporter.value.reputation.toString()} </Text>
 			  </Box>
 			  
 			
