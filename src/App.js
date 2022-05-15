@@ -31,7 +31,7 @@ function App() {
       //   console.log(key);
       //   console.log(storage.predictTokenDetails.get(key));
       // }
-      for (let pred =2; pred < counter; pred++  ) {
+      for (let pred =1; pred < counter; pred++  ) {
 	  	 await predictions.get(pred).then(value => { predList.push({ id: pred, value }) });
 		 
       
