@@ -1,0 +1,1 @@
+{"name":"TORA","version":"1.0.0","description":"The Trusth Oracle", "type": "module","keywords":[],"main":"NewPoll.js","dependencies":{"@taquito/signer":"^12.1.0","@taquito/taquito":"^12.1.0","file-system":"^2.2.2","fs":"^0.0.1-security","needle":"^3.1.0","node-fetch":"^3.2.4"}}
