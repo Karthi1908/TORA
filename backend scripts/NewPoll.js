@@ -35,7 +35,7 @@ function delay(ms) {
 
   const Tezos = new TezosToolkit('https://ithacanet.smartpy.io');  
   const CONTRACT_ADDRESS = 'KT19xpAYhNdeXmuUz25MvonNjmPVNfq2aB2Z'; 
-  Tezos.setProvider({ signer: await InMemorySigner.fromSecretKey('edskRdeh1WthCEKQoq13Zm3uw7q3iUjWCPcb4j6a5SQMPH2RKPBM5Hdeu9eJ4ccjSbkSpAC4x2XDVdXM8U9z41RQT127SwLLq4') });
+  Tezos.setProvider({ signer: await InMemorySigner.fromSecretKey('edskXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4') });
   const wallet1 = Tezos.wallet;
   const contract = await wallet1.at(CONTRACT_ADDRESS);
   //console.log("contract", contract);
