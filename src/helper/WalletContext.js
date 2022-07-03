@@ -21,7 +21,7 @@ const useWallet = () => {
       const req = await beaconWallet.client.requestPermissions({
         network: {
           type: 'ithacanet',
-		  rpcUrl: 'https://ithacanet.smartpy.io'
+		  rpcUrl: 'https://ithacanet.ecadinfra.com'
         },
       });
       if (req) {
