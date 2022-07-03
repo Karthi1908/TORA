@@ -60,10 +60,11 @@ function App() {
             >
               <BrowserRouter>
                 <Header />
-				<Reporter />
+			
 				
 				<Routes>
                 <Route exact path="/"  element = {<Home />} /> 
+				<Route exact path="./"  element = {<Reporter />} /> 
 				
 				
                 <Route
@@ -73,6 +74,8 @@ function App() {
 
                 <Route path="/mypreds" element ={<MyPreds />} />
 				</Routes>
+				
+				<Reporter />
               </BrowserRouter>
             </PredictionContext.Provider>
           </>
