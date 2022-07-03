@@ -9,7 +9,7 @@ const TOKEN_ADDRESS = 'KT19Spcv2j1ktJd5EBTkg4XbnaEeRD1tWmhW';
 //const TOKEN_ADDRESS = 'KT1BvYkPGPau7xDSRxLVz7DQpuWZfrXBLL27';
 
 //const Tezos = new TezosToolkit('https://hangzhounet.smartpy.io');
-const Tezos = new TezosToolkit('https://ithacanet.smartpy.io');
+const Tezos = new TezosToolkit('https://ithacanet.ecadinfra.com');
 Tezos.setPackerProvider(new MichelCodecPacker());
 
 const ContractProvider = Tezos.contract;
