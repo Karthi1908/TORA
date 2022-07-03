@@ -293,7 +293,9 @@ const PortfolioDetails = (activeAccount) => {
 			console.log("address ", address);
 			const storage  = await contract.storage();
 			console.log(portfolio);
-			portfolio = await storage.reporters.get(address).then(value => { return ({name : value.name, balance : value.balance.toString(), lockedAmount : value.lockedAmount.toString()})});
+			portfolio = await storage.reporters.get(address)
+					.then(value => { return ({name : value.name, balance : value.balance.toString(), lockedAmount : value.lockedAmount.toString()})})
+					.catch(value => { return ({name : "Not Registered" , balance : 0, lockedAmount : 0})});
 			console.log(portfolio);		
 
 			};
