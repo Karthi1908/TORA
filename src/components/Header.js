@@ -219,9 +219,10 @@ export default function Header({ links = [] }) {
                   </MenuItem>
 					<Whitelist />
                   <MenuItem onClick={disconnect}>Disconnect</MenuItem>
-				  <PortfolioDetails activeAccount={activeAccount}/>
-				  <Deposit />
+				  
+		  <Deposit />
                   <Redeem />
+		  <PortfolioDetails activeAccount={activeAccount}/>
 				  
                 </MenuList>
               </Menu>
