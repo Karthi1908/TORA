@@ -3,20 +3,20 @@ import { BeaconWallet } from '@taquito/beacon-wallet';
 import { TezosToolkit, MichelCodecPacker, compose } from '@taquito/taquito';
 
 
-const CONTRACT_ADDRESS = 'KT1EvyfVE1bLztZ6vigLHwjmZrNDr52vsNcq';
+//const CONTRACT_ADDRESS = 'KT1EvyfVE1bLztZ6vigLHwjmZrNDr52vsNcq';
 const TOKEN_ADDRESS = 'KT19Spcv2j1ktJd5EBTkg4XbnaEeRD1tWmhW';
-//const CONTRACT_ADDRESS = 'KT1DwGe6b1x3iqCGMgrFykasxEErt986Rgox';
+const CONTRACT_ADDRESS = 'KT1QaSBB28diZQANVE6NNR7iQvnKKXtPivMX';
 //const TOKEN_ADDRESS = 'KT1BvYkPGPau7xDSRxLVz7DQpuWZfrXBLL27';
 
 //const Tezos = new TezosToolkit('https://hangzhounet.smartpy.io');
-const Tezos = new TezosToolkit('https://ithacanet.ecadinfra.com');
+const Tezos = new TezosToolkit('https://jakartanet.ecadinfra.com');
 Tezos.setPackerProvider(new MichelCodecPacker());
 
 const ContractProvider = Tezos.contract;
 
 const beaconWallet = new BeaconWallet({
-  name: 'Predictor',
-  preferredNetwork: "ithacanet"
+  name: 'TORA',
+  preferredNetwork: "jakartanet"
 });
 
 Tezos.setWalletProvider(beaconWallet);
