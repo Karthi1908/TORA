@@ -190,7 +190,7 @@ export default function Predict() {
         flexWrap="wrap"
       >
         <Text fontSize="sm">Prediction id: {data.ref} </Text>
-		<Text fontSize="sm">Ref: {data.newsRef} </Text>
+		<Text fontSize="sm">Ref: <a href={data.newsRef} target="_blank"> {data.newsRef} </a> </Text>
 
         <Text
           fontSize="lg"
