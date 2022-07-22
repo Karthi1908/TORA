@@ -20,8 +20,8 @@ const useWallet = () => {
     if (!currAcc) {
       const req = await beaconWallet.client.requestPermissions({
         network: {
-          type: 'ithacanet',
-		  rpcUrl: 'https://ithacanet.ecadinfra.com'
+          type: 'jakartanet',
+		  rpcUrl: 'https://jakartanet.ecadinfra.com'
         },
       });
       if (req) {
