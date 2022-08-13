@@ -3,7 +3,7 @@ import { BeaconWallet } from '@taquito/beacon-wallet';
 import { TezosToolkit, MichelCodecPacker, compose } from '@taquito/taquito';
 
 
-const CONTRACT_ADDRESS = 'KT1LVV9rkaMZ7Cdu47DXzqDU75onNPosoNAE';
+const CONTRACT_ADDRESS = 'KT1QHcts7JoM42im3PUSjFBXU6oEjimHuJuR';
 const TOKEN_ADDRESS = 'KT19Spcv2j1ktJd5EBTkg4XbnaEeRD1tWmhW';
 //const CONTRACT_ADDRESS = 'KT1DwGe6b1x3iqCGMgrFykasxEErt986Rgox';
 //const TOKEN_ADDRESS = 'KT1BvYkPGPau7xDSRxLVz7DQpuWZfrXBLL27';
