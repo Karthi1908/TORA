@@ -85,7 +85,7 @@ function App() {
                 <Route path="/mypreds" element ={<MyPreds />} />
 				</Routes>
 				
-				<Reporter />
+		
               </BrowserRouter>
             </PredictionContext.Provider>
           </>
