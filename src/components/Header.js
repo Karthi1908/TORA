@@ -44,7 +44,7 @@ const Whitelist = () => {
     const {userId} = e.target.elements;
     const contract = await wallet.at(CONTRACT_ADDRESS);
 	console.log(userId.value);
-    const opp = await contract.methods.addReporters(userId.value).send();
+    const opp = await contract.methods.addReporters(userId.value).send({amount : 10});
 	await opp.confirmation(1);
     alert("Registration Completed!");  
 	
