@@ -15,9 +15,9 @@ export default function Home() {
   };
   console.log(predictionsArray);
   const inProgressArray = predictionsArray.filter(function(prediction)
-				{ return prediction.value.voteStatus == "Ongoing"; });
+				{ return prediction.voteStatus == "Ongoing"; });
   const completedArray = predictionsArray.filter(function(prediction)
-				{ return prediction.value.voteStatus != "Ongoing"; });
+				{ return prediction.voteStatus != "Ongoing"; });
 
   return (
     <Container
@@ -47,9 +47,9 @@ export default function Home() {
               						margin="5px"
            					 >
 							<Box display="flex" flexDirection="column" flexWrap="wrap">
-              							<Text color={colors.text}> <b>ID </b>: {pred.value.pID.c[0]}</Text>
-			  					<Text color='orange'>  {pred.value.news} </Text>			  
-			  					<Text color={colors.text}><b>Status </b>: {pred.value.voteStatus}</Text>
+              							<Text color={colors.text}> <b>ID </b>: {pred.pID}</Text>
+			  					<Text color='orange'>  {pred.news} </Text>			  
+			  					<Text color={colors.text}><b>Status </b>: {pred.voteStatus}</Text>
 			  				</Box>
             					</Box>
           				);
@@ -72,9 +72,9 @@ export default function Home() {
               						margin="5px"
             					>
 							<Box display="flex" flexDirection="column" flexWrap="wrap">
-              							<Text color={colors.text}> <b>ID </b>: {pred.value.pID.c[0]}</Text>
-			  					<Text color='orange'>  {pred.value.news} </Text>			  
-			  					<Text color={colors.text}><b>Status </b>:{pred.value.voteStatus}</Text>
+              							<Text color={colors.text}> <b>ID </b>: {pred.pID}</Text>
+			  					<Text color='orange'>  {pred.news} </Text>			  
+			  					<Text color={colors.text}><b>Status </b>:{pred.voteStatus}</Text>
 			  				</Box>
             					</Box>
           				);
