@@ -23,7 +23,9 @@ import {
 import PredictionContext from '../../helper/PredictionContext';
 import { useParams  } from 'react-router-dom';
 import Loading from '../../helper/Loading';
-import { CONTRACT_ADDRESS, wallet } from '../../helper/tezos';
+import { CONTRACT_ADDRESS, wallet, beaconWallet } from '../../helper/tezos';
+import { useWallet } from '../../helper/WalletContext';
+import { char2Bytes, bytes2Char } from '@taquito/utils'
 
 const Vote = ({ id, options }) => {
   const [request, setRequest] = React.useState({
@@ -113,6 +115,7 @@ export default function Predict() {
   id = id.toString();
   const { predictions } = React.useContext(PredictionContext);
   const [data, setData] = React.useState(null);
+  const { connect, disconnect, activeAccount, connected } = useWallet();
   const colors = {
     bg: useColorModeValue('blue.100', 'blue.900'),
     text: useColorModeValue('blue', 'white'),
@@ -121,11 +124,31 @@ export default function Predict() {
   };
 
   React.useEffect(async () => {
+	  
+	const pkh = await wallet.pkh({ forceRefetch: true });
+	console.log("Wallet",wallet._pkh);
+
+	let flag	= " NOT VOTED for this item";
+	
     const _ = await predictions.get(id).then(value => {return value});
 	const contract = await wallet.at(CONTRACT_ADDRESS);
 		const storage = await contract.storage();
 		const snapshot = await storage.voteSnapshot.get(id).then(value => {return value});
 		const snapshotList = [];
+		
+	
+	if (wallet._pkh) {
+
+		const voterDetails = await storage.predictVotes.get(id).then(value => {return value}); 
+		if (voterDetails.valueMap.has( '"' + wallet._pkh + '"')) {
+			flag = " ALREADY VOTED for this item"
+		}
+		 
+		console.log("voterDetails", voterDetails);
+		console.log("flag", flag);
+		
+	}
+	
 		
 		for (let pred of snapshot.keys()) {
 			if (pred != 'Total') {			  
@@ -139,8 +162,9 @@ export default function Predict() {
 	  console.log("volume :", volume);
 
 	setData({
-      prediction: _.news,
+      prediction:bytes2Char( _.news),
       key: id,
+	  flag : flag,
       ref: _.pID.toString(),
 	  newsRef : _.newsRef,
       pstatus: _.voteStatus,
@@ -178,7 +202,9 @@ export default function Predict() {
           <AccordionPanel p="6"> "T-ORA is for informational and educational purposes only ."</AccordionPanel>
         </AccordionItem>
       </Accordion>
-      <Box
+      
+	  <Text fontSize="l"> User has {data.flag} </Text>
+	  <Box
         p="6"
         maxW="max-content"
         borderWidth="1px"
@@ -190,7 +216,7 @@ export default function Predict() {
         flexWrap="wrap"
       >
         <Text fontSize="sm">Prediction id: {data.ref} </Text>
-	<Text fontSize="sm">Ref: <u> <a href={data.newsRef} target="_blank"> {data.newsRef}  </a> </u> </Text>
+		<Text fontSize="sm">Ref: {data.newsRef} </Text>
 
         <Text
           fontSize="lg"
@@ -327,6 +353,3 @@ export default function Predict() {
     <Loading />
   );
 }
-
-
-
