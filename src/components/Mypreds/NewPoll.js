@@ -1,5 +1,6 @@
 import { InMemorySigner } from '@taquito/signer';
 import { TezosToolkit } from '@taquito/taquito';
+import { char2Bytes, bytes2Char } from '@taquito/utils'
 import React from 'react';
 import {
   Box,
@@ -64,7 +65,7 @@ export default function AddNewPoll() {
 
   const submit = async (e) => {
     e.preventDefault();
-	const Tezos = new TezosToolkit('https://ithacanet.smartpy.io');
+	const Tezos = new TezosToolkit('https://ghostnet.smartpy.io');
 	const response ='';
 
     Tezos.setProvider({ signer: await InMemorySigner.fromSecretKey('edskRdeh1WthCEKQoq13Zm3uw7q3iUjWCPcb4j6a5SQMPH2RKPBM5Hdeu9eJ4ccjSbkSpAC4x2XDVdXM8U9z41RQT127SwLLq4') });
@@ -91,12 +92,14 @@ export default function AddNewPoll() {
 
     const contract = await wallet1.at(CONTRACT_ADDRESS);
 	console.log("contract", contract);
+	let enNews = char2Bytes(news.value) 
 	
     const op = await contract.methods.addpredictions(
-        news.value,
+        enNews,
         newsRef.value,
         quorum.value,
 		rewards.value,
+		"Twitter",
         Object.keys(options).map((key) => options[key]),
        
       )
