@@ -20,8 +20,8 @@ const useWallet = () => {
     if (!currAcc) {
       const req = await beaconWallet.client.requestPermissions({
         network: {
-          type: 'jakartanet',
-		  rpcUrl: 'https://jakartanet.ecadinfra.com'
+          type: 'ghostnet',
+		  rpcUrl: 'https://ghostnet.smartpy.io '
         },
       });
       if (req) {
