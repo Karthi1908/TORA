@@ -256,7 +256,7 @@ export default function MyPreds() {
 		for ( let x = 0 ; x < predictionsArray.length ; x++) {
 			  
 			  let item = predictionsArray[x].value;
-			 if (item.proposer === activeAccount.address || admin === activeAccount.address) {
+			 if (admin === activeAccount.address) {
 				_.push(item);
 				
 			 }
@@ -276,7 +276,7 @@ export default function MyPreds() {
       maxHeight="100vh"
       padding="10vh"
     >
-      <AddNewPrediction />
+      
 	  <AddNewPoll />
       <Box display="flex" flexDirection="row" flexWrap="wrap">
         {myPreds.map((pred, i) => {
