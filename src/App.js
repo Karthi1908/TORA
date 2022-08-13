@@ -7,6 +7,7 @@ import Predict from './components/Predict';
 import './App.css';
 import Home from './components/Home';
 import { ContractProvider, CONTRACT_ADDRESS } from './helper/tezos';
+import { char2Bytes, bytes2Char } from '@taquito/utils'
 import PredictionContext from './helper/PredictionContext';
 import Loading from './helper/Loading';
 import MyPreds from './components/Mypreds';
@@ -32,8 +33,17 @@ function App() {
       //   console.log(storage.predictTokenDetails.get(key));
       // }
       for (let pred =1; pred < counter; pred++  ) {
-	  	 await predictions.get(pred).then(value => { predList.push({ id: pred, value }) });
-		 
+	  	 await predictions.get(pred).then(value => { predList.push({ id: pred, 
+								news : bytes2Char(value.news), 
+								finalResult : value.finalResult, 
+								newsRef : value.newsRef,
+								pID : value.pID.toString(),
+								quorumRequired : value.quorumRequired.toString(),
+								rewards : value.rewards.toString(),
+								source : value.source,
+								voteOptions : value.voteOptions,
+								voteStatus : value.voteStatus }) });
+		 console.log(predList);
       
       }
       updatePredictions(predictions, predList);
@@ -75,7 +85,7 @@ function App() {
                 <Route path="/mypreds" element ={<MyPreds />} />
 				</Routes>
 				
-		
+				<Reporter />
               </BrowserRouter>
             </PredictionContext.Provider>
           </>
