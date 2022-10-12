@@ -75,6 +75,7 @@ export default function Home() {
               							<Text color={colors.text}> <b>ID </b>: {pred.pID}</Text>
 			  					<Text color='orange'>  {pred.news} </Text>			  
 			  					<Text color={colors.text}><b>Status </b>:{pred.voteStatus}</Text>
+								<Text color='orange'><b>Crowd Decision </b>:{pred.finalResult}</Text>
 			  				</Box>
             					</Box>
           				);
