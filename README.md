@@ -58,8 +58,8 @@ T-ORA currently is integrated with Twitter API to pull the tweets for any specif
 5. For each vote, some stake of the Checkers get locked
 6. Voting continues till the quorum is met and till any of the options get 80% of the total votes
 7. The option that gets at least 80 % of the votes is declared the final result
-8. Checkers who didn't vote on the final result lose 20% of the locked stake and the remaining of locked stake is added back to the balance
-9. Checkers who voted for the final result get back their locked stake + some additional stake
+8. Checkers who didn't vote for the correct final outcome lose 20% of the locked stake and the remaining of locked stake is added back to the balance
+9. Checkers who voted for the correct outcome get back their locked stake + some additional stake
 10. Requestor can see the final result on the platform
 
     
