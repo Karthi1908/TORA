@@ -73,11 +73,10 @@ T-ORA currently is integrated with Twitter API to pull the tweets for any specif
     
 ### Future Plans:
 
-1. Integrations with Facebook, and Reddit for pulling the results
+1. Integrations with Facebook, and Reddit .
 2. Integrations with whatapp
 3. Fact-checking on youtube, twitch and other podcasts
 4. Fact checking main stream meadia(both print and broadcast media)
-5. Posting the results back to the post as comments
 
 
 ### Demo site
