@@ -1,6 +1,8 @@
 # T-ORA
 Decentralised Truth Oracle on Tezos
 
+<a href='https://tora-three.vercel.app/'>TORA</a>
+
 
 ### Introduction
 
@@ -81,7 +83,7 @@ T-ORA currently is integrated with Twitter API to pull the tweets for any specif
 
 ### Demo site
 
-<a href='https://tora-livid.vercel.app/'>TORA</a>
+<a href='https://tora-three.vercel.app/'>TORA</a>
   
 
 #### Smart Contract:
